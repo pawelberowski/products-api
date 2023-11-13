@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { CanBeUndefined } from '../utils/can-be-undefined';
 
 export class UpdateProductDto {
@@ -12,8 +12,8 @@ export class UpdateProductDto {
   @CanBeUndefined()
   price: number;
 
-  @IsNumber()
+  @IsBoolean()
   @IsNotEmpty()
   @CanBeUndefined()
-  quantity: number;
+  isInStock: boolean;
 }

@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class CreateProductDto {
   @IsString()
@@ -9,7 +9,7 @@ export class CreateProductDto {
   @IsNotEmpty()
   price: number;
 
-  @IsNumber()
+  @IsBoolean()
   @IsNotEmpty()
-  quantity: number;
+  isInStock: boolean;
 }
