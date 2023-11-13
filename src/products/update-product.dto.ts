@@ -5,15 +5,15 @@ export class UpdateProductDto {
   @IsString()
   @IsNotEmpty()
   @CanBeUndefined()
-  name: string;
+  name?: string;
 
   @IsNumber()
   @IsNotEmpty()
   @CanBeUndefined()
-  price: number;
+  price?: number;
 
   @IsBoolean()
   @IsNotEmpty()
   @CanBeUndefined()
-  isInStock: boolean;
+  isInStock?: boolean;
 }
